@@ -22,20 +22,6 @@ class OtherPage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: Row(
-        children: [
-          FloatingActionButton(
-            onPressed: () {},
-            child: const Icon(Icons.add),
-            heroTag: "Increment",
-          ),
-          FloatingActionButton(
-            onPressed: () {},
-            child: const Icon(Icons.remove),
-            heroTag: "Decrement",
-          ),
-        ],
-      ),
     );
   }
 }

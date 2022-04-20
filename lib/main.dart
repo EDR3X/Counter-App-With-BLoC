@@ -30,6 +30,22 @@ class HomePage extends StatelessWidget {
           style: Theme.of(context).textTheme.headline4,
         ),
       ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: () {},
+            child: const Icon(Icons.add),
+          ),
+          const SizedBox(
+            width: 20,
+          ),
+          FloatingActionButton(
+            onPressed: () {},
+            child: const Icon(Icons.remove),
+          ),
+        ],
+      ),
     );
   }
 }
