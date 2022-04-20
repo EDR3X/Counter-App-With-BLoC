@@ -8,7 +8,7 @@ class NextPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Other Page",
+          "Another Page",
         ),
       ),
       body: Center(
@@ -16,7 +16,7 @@ class NextPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             Text(
-              "hello there",
+              "This is next page",
               style: TextStyle(fontSize: 20),
             ),
           ],
