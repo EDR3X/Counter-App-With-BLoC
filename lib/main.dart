@@ -1,4 +1,7 @@
+import 'package:bloc_counter_with_bloc_package/blocs/counter/counter_bloc.dart';
+import 'package:bloc_counter_with_bloc_package/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() => runApp(const MyApp());
 
@@ -7,44 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.green),
-      debugShowCheckedModeBanner: false,
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("another Counter"),
-      ),
-      body: Center(
-        child: Text(
-          "data",
-          style: Theme.of(context).textTheme.headline4,
-        ),
-      ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          FloatingActionButton(
-            onPressed: () {},
-            child: const Icon(Icons.add),
-          ),
-          const SizedBox(
-            width: 20,
-          ),
-          FloatingActionButton(
-            onPressed: () {},
-            child: const Icon(Icons.remove),
-          ),
-        ],
+    return BlocProvider<CounterBloc>(
+      create: (context) => CounterBloc(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "Counter Cubit",
+        theme: ThemeData(primarySwatch: Colors.green),
+        home: const HomePage(),
       ),
     );
   }
